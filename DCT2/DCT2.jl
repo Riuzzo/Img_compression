@@ -1,12 +1,6 @@
 # Definizione di una funzione
 using FFTW
 
-function saluta(nome)
-    println("Ciao, $nome")
-    matrix = [231 32 233 161 24 71 140 245]
-    println(dct(matrix))
-end
-
 function compute_internal_product_index(index, dimension)
     return index == 1 ? 1/sqrt(dimension) : sqrt(2/dimension)
 end
@@ -40,8 +34,6 @@ function my_dct(matrix, k)
     println(temp*compute_internal_product_index(k, dim))
 end
 
-# Chiamata della funzione
-saluta("Mondo")
 
 for k = 1:8
     my_dct([231 32 233 161 24 71 140 245], k)
